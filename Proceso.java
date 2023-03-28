@@ -49,6 +49,7 @@ public class Proceso implements Comparable<Proceso> {
 
     @Override
     public String toString() {
+        
         int pr = 120 + niceValue;
         return nombreProceso + "," + nombreUsuario + "," + niceValue + ",PR=" + pr;
     }
