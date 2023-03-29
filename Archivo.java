@@ -9,6 +9,7 @@ import java.io.IOException;
 public class Archivo {
     private String nombreArchivo;
     private ArrayList<Proceso> lista;
+    private VectorHeap<Proceso> lista2;
 
     public static int convertirStringAInt(String numeroString) {
         int numeroInt;
@@ -23,6 +24,7 @@ public class Archivo {
     public Archivo(String nombre) {
         this.nombreArchivo = nombre;
         this.lista = new ArrayList<Proceso>();
+        this.lista2 = new VectorHeap<Proceso>();
     }
 
     public ArrayList<Proceso> leer() throws IOException {
@@ -45,8 +47,38 @@ public class Archivo {
 
             }
 
-        }catch(Exception e){System.out.println(e);}
+        } catch (Exception e) {
+            System.out.println(e);
+        }
         return this.lista;
+
+    }
+
+    public VectorHeap<Proceso> leerHeap() throws IOException {
+        File archivo = new File(nombreArchivo);
+        FileReader lector = new FileReader(archivo);
+        try (BufferedReader lectorBuffer = new BufferedReader(lector)) {
+            String linea;
+            while ((linea = lectorBuffer.readLine()) != null) {
+                String[] lista = linea.split(",");
+                if (lista.length != 3) {
+                    throw new IllegalArgumentException("Esta mal escrita la linea: " + linea);
+                }
+                String nombreProceso = lista[0];
+                String nombreUsuario = lista[1];
+                int nice = convertirStringAInt(lista[2]);
+                int prioridad = 0;
+
+                Proceso proc = new Proceso(nombreProceso, nombreUsuario, nice, prioridad);
+                this.lista2.add(proc);
+
+            }
+            return this.lista2;
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return lista2;
 
     }
 }

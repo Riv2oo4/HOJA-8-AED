@@ -117,5 +117,14 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 	public void clear() {
 		
 	}
+
+	public void printElements() {
+		for (E element : data) {
+			System.out.print(element + " ");
+			System.out.println("\n");
+		}
+		System.out.println();
+	}
+	
 	
 }
