@@ -4,6 +4,11 @@ import java.util.Comparator;
 
 public class OrdenamientoBloqueDatos {
 
+    
+    /** 
+     * @param bloqueDatos
+     * @return ArrayList<String>
+     */
     public ArrayList<String> ordenarPorUltimoValor(ArrayList<String> bloqueDatos) {
 
         Collections.sort(bloqueDatos, new Comparator<String>() {

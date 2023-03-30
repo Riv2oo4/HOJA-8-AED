@@ -3,6 +3,11 @@ import java.util.ArrayList;
 
 
 public class Main {
+    
+    /** 
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         Archivo manejoArchivo=new Archivo("procesos.txt");
         ArrayList<Proceso> listaEspera=manejoArchivo.leer();

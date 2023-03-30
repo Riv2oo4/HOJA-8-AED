@@ -51,6 +51,10 @@ public class Test{
 
     }
 
+    
+    /** 
+     * @throws IOException
+     */
     public void testArchivo() throws IOException{
         System.out.println("--------------------------Prueba archivo--------------------------------");
         Archivo manejoArchivo=new Archivo("procesos.txt");

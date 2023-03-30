@@ -6,11 +6,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+
 public class Archivo {
     private String nombreArchivo;
     private ArrayList<Proceso> lista;
     private VectorHeap<Proceso> lista2;
 
+    
+    /** 
+     * @param numeroString
+     * @return int
+     */
     public static int convertirStringAInt(String numeroString) {
         int numeroInt;
         try {
@@ -27,6 +33,11 @@ public class Archivo {
         this.lista2 = new VectorHeap<Proceso>();
     }
 
+    
+    /** 
+     * @return ArrayList<Proceso>
+     * @throws IOException
+     */
     public ArrayList<Proceso> leer() throws IOException {
         File archivo = new File(nombreArchivo);
         FileReader lector = new FileReader(archivo);
@@ -54,6 +65,11 @@ public class Archivo {
 
     }
 
+    
+    /** 
+     * @return VectorHeap<Proceso>
+     * @throws IOException
+     */
     public VectorHeap<Proceso> leerHeap() throws IOException {
         File archivo = new File(nombreArchivo);
         FileReader lector = new FileReader(archivo);

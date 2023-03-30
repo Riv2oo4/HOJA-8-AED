@@ -3,6 +3,11 @@ import java.util.ArrayList;
 
 
 public class Main2 {
+    
+    /** 
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         Archivo manejoArchivo=new Archivo("procesos.txt");
         VectorHeap<Proceso> listaEspera=manejoArchivo.leerHeap();
