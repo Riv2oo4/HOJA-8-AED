@@ -1,3 +1,11 @@
+/**
+ * UNIVERSIDAD DEL VALLE DE GUATEMALA
+ * ALGORITMOS Y ESTRUCTURAS DE DATOS
+ * Douglas Barrios
+ *
+ * Mauricio Julio Rodrigo Lemus Guzmán-22461
+ * Hugo Eduardo Rivas Fajardo-22500
+ */
 import java.io.IOException;
 import java.util.ArrayList;
 
